@@ -1,8 +1,10 @@
 # Heap & Stack
 
-Bu bölümde Python’da bellek yönetimini iki ana kavram üzerinden öğreneceğiz:
+![Python Stack Heap Genel Diyagram](assets/images/stack-heap.svg)
 
-- **Stack (Yığın):** Fonksiyon çağrıları ve geçici/yerel bilgiler
+Bu bölümde Python’da bellek yönetimini iki ana kavram üzerinden öğreneceğiz: 
+
+- **Stack (Yığın):** Fonksiyon çağrıları ve geçici / yerel bilgiler
 - **Heap (Öbek):** Program çalışırken oluşan nesneler (list, dict, str, class vb.)
 
 > 📌 Önemli fikir:  
@@ -15,24 +17,24 @@ Bu bölümde Python’da bellek yönetimini iki ana kavram üzerinden öğrenece
 **Stack (Yığın)**, fonksiyon çalışırken kullanılan, **geçici, düzenli ve hızlı** bir bellek alanıdır.
 
 ### Stack’in Özellikleri
-Stack, **LIFO** mantığıyla çalışır:
+Stack, **LIFO (Last In – First Out)** mantığıyla çalışır:
 
-- **Last In** (son giren)
-- **First Out** (ilk çıkar)
+- **Last In** (son giren) → **First Out** (ilk çıkar)
   
 Fonksiyonlar çalışırken oluşur
 Fonksiyon çağrısı olduğunda stack’e bir “çerçeve” (**stack frame**) eklenir.  
-Fonksiyon bittiğinde o frame **otomatik kaldırılır**
-Çok hızlıdır
+Fonksiyon bittiğinde o frame **otomatik silinir**
+Bellek yönetimi çok hızlıdır
 
 ### Stack’te Tutulanlar
+
 - Fonksiyon çağrıları (call frames)
 - Parametreler
 - Yerel değişkenler (local variables)
 - Çoğunlukla **referanslar/adresler** (nesnenin kendisi değil)
 
 > Stack’in en güçlü yanı:  
-> **Hızlıdır** ve **kendiliğinden temizlenir**.
+> **Hızlıdır** ve **kendiliğinden otomatik temizlenir**.
 
 ---
 
@@ -42,10 +44,10 @@ Fonksiyon bittiğinde o frame **otomatik kaldırılır**
 
 ### Heap’in Özellikleri
 - Boyut dinamik olabilir (liste büyür-küçülür)
-- Daha yavaştır
+- Stack’e göre daha yavaştır
 - Temizliği “otomatik” ama stack gibi anında değil:
   - **Garbage Collector** (GC) ile yapılır
-- Nesneler burada yaşar (list/dict/str/class)r
+- Nesneler fonksiyon bitse bile burada yaşayabilir (list / dict / str / class)
 
 ### Heap’te Tutulanlar
 - list
@@ -54,7 +56,7 @@ Fonksiyon bittiğinde o frame **otomatik kaldırılır**
 - tuple
 - `str`
 - class instance’ları (nesneler)
-- çoğu “Python object”
+- Python’daki çoğu “object”
 
 ---
 
@@ -67,22 +69,24 @@ Bu bölümde Python’da değişkenlerin değer değil, nesnelere **referans** t
 </p>
 <p align="center"><em>Şekil: Python’da Stack–Heap referans modeli</em></p>
 
+Python’da değişkenler bir **değer tutmaz**, heap’teki bir nesneye **işaret eder**.
+
 Aşağıdaki satıra bakalım:
 
 ```python
 x = 3
 ```
 
-Bu satırın anlamı:
+Bu satır ne yapar?
 
-- Heap’te bir **`3` nesnesi** vardır  
+- Heap’te bir `int` nesnesi **`3` nesnesi** vardır  
   (Python’da `int` dahil her şey bir nesnedir)
 
 - `x` ise bu nesneye işaret eden bir **isim / referanstır**
 
 > **Pratik kural:**  
-> `x` bir kutu değildir.  
-> `x`, Heap’teki bir nesneyi işaret eden **etiket** gibidir.
+> Değişken (`x`) bir kutu değildir.  
+> Değişken (`x`), Heap’teki bir nesneyi işaret eden **etiket** gibidir.
 
 ---
 
@@ -99,6 +103,9 @@ Burada olan şey:
 - `"mike tyson"` ve `"muhammed ali"` → heap’te duran **string nesneleri**
 
 List büyük ve dinamik olduğu için heap’te yaşar.
+
+Sebep:
+Listeler **büyüyebilir / değişebilir**, bu yüzden heap’te yaşarlar.
 
 ---
 
@@ -128,13 +135,17 @@ greeting("ipek")
 
 ### Ne Olur?
 
-- `greeting` çağrılır → Stack’te yeni bir frame eklenir
+- `greeting` çağrılır → Stack’te yeni bir frame oluşur
 - `first_name` parametresi frame içinde oluşur → Stack’te tutulur
+    - `first_name` → stack frame içindeki bir referans
 - `"ipek"` string nesnesi heap’te bulunur (veya heap’te oluşturulur)
+    - `"ipek"` → Heap’teki string nesnesi
 - `first_name` heap’teki `"ipek"` nesnesine referans tutar
+    - `first_name` → `"ipek"` nesnesini işaret eder
 
 ### Fonksiyon bitince
 - `first_name` stack’ten silinir
+    - Stack frame silinir
 - `"ipek"` nesnesine başka referans yoksa GC daha sonra temizleyebilir
 
 ### Özet
@@ -159,6 +170,10 @@ a = "hi"
 s += "!"
 ```
 
+Burada:
+- `"hi!"` → Heap’te **yeni** bir nesnedir
+- `s` artık yeni nesneyi işaret eder
+
 Yeni bir string Heap’te oluşturulur.
 
 Bu “değiştirme” gibi görünür ama aslında:
@@ -166,6 +181,7 @@ Bu “değiştirme” gibi görünür ama aslında:
 - `s` artık yeni nesneyi işaret eder
 
 > Immutable nesnelerde “değişiklik” çoğunlukla **yeni nesne** üretir.
+> Immutable nesneler **değişmez**, her değişiklik yeni nesne üretir.
 
 ---
 
@@ -180,9 +196,13 @@ numbers = [1, 2]
 numbers.append(3)
 ```
 
+Burada:
+- Aynı heap nesnesi değişir
+- Referans değişmez
+
 Aynı liste Heap’te değiştirilir.
 
-Burada:
+Yani:
 - Aynı list nesnesi heap’te durur
 - İçeriği değiştirilir
 - `lst` aynı nesneyi işaret etmeye devam eder
@@ -205,15 +225,17 @@ print(a)
 [1, 2, 3]
 ```
 
-Neden?
-- `a` ve `b` aynı heap listesine işaret ediyor
-- `b.append(3)` aynı nesneyi değiştirdiği için `a` da değişmiş gibi görünür
+Sebep:
+- `a` ve `b` aynı heap nesnesine işaret ediyor
+- Değişiklik ortak
+  - `b.append(3)` aynı nesneyi değiştirdiği için `a` da değişmiş gibi görünür
  
 > Bu, Python’da en sık bug üreten konulardan biridir.
 
 ---
 
 ## Shallow Copy vs Deep Copy (Heap kopyalama)
+
 ### Shallow Copy (Yüzeysel)
 
 Sadece üst kabı kopyalar, içerideki nesneler paylaşılabilir:
@@ -229,9 +251,13 @@ print(a)
 
 `a` da değişebilir çünkü iç listeler hâlâ ortak.
 
+- Üst liste kopyalanır
+- İç listeler **ortaktır**
+
 ### Deep Copy (Derin)
 
-İç içe nesneleri de kopyalar:
+- Tüm yapı tamamen kopyalanır
+  - İç içe nesneleri de kopyalar
 
 ```python
 import copy
@@ -249,11 +275,12 @@ print(a)
 ## Garbage Collector (GC) Kısaca
 
 Python’da bellek temizliği iki mekanizma ile olur:
-- **Reference Counting:** Bir nesneyi işaret eden referans sayısı 0 olursa serbest kalır
+- **Reference Counting:** Bir nesneyi işaret eden referans sayısı 0 olursa serbest kalır ve nesne silinir
 - **GC (cycle collector):** Döngüsel referansları (A -> B, B -> A) temizler
 
 > Pratikte: Sen “delete” yapmasan bile Python çoğu işi otomatik halleder.
 > Ama döngüsel referanslar için GC devreye girer.
+> Genelde manuel temizlik gerekmez.
 
 ---
 
@@ -289,6 +316,7 @@ Arşiv büyüktür, kalıcıdır.
 - Heap nesnelerin yaşadığı alandır
 - Python’da değişkenler genelde **değer değil referans** taşır
 - Mutable ve immutable farkı heap davranışını etkiler
+
 
 
 
