@@ -67,8 +67,8 @@ print(u2.role)  # member
 
 `role` değişkeni sınıfa aittir ve tüm nesneler tarafından ortak olarak kullanılır.
 
-✔️ `role` sınıfa aittir
-✔️ Her instance aynı değeri görür
+- `role` sınıfa aittir
+- Her instance aynı değeri görür
 
 ---
 
