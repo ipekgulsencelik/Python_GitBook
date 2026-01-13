@@ -32,8 +32,8 @@ print(u1.age)  # 29
 print(u2.age)  # 35
 ```
 
-✔️ `age` her kullanıcıya özeldir
-✔️ `u1` değişti, `u2` etkilenmedi
+- `age` her kullanıcıya özeldir
+- `u1` değişti, `u2` etkilenmedi
 
 ---
 
