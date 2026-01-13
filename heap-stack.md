@@ -66,12 +66,9 @@ Bellek yönetimi çok hızlıdır
 
 ## “Değişken = Referans” Mantığı
 
-Bu bölümde Python’da değişkenlerin değer değil, nesnelere **referans** tuttuğunu göreceğiz.
+![Python referans modeli](assets/images/python-reference.svg)
 
-<p align="center">
-  <img src="assets/images/stack-heap.svg" alt="Stack vs Heap (Python)" width="520">
-</p>
-<p align="center"><em>Şekil: Python’da Stack–Heap referans modeli</em></p>
+Bu bölümde Python’da değişkenlerin değer değil, nesnelere **referans** tuttuğunu göreceğiz.
 
 Python’da değişkenler bir **değer tutmaz**, heap’teki bir nesneye **işaret eder**.
 
@@ -163,6 +160,8 @@ greeting("ipek")
 
 ### Immutable (Değiştirilemez)
 
+![Immutable nesne](assets/images/immutable.svg)
+
 - `int`
 - `float`
 - `bool`
@@ -190,6 +189,8 @@ Bu “değiştirme” gibi görünür ama aslında:
 ---
 
 ### Mutable (Değiştirilebilir)
+
+![Mutable nesne](assets/images/mutable.svg)
 
 - `list`
 - `dict`
@@ -326,6 +327,7 @@ Arşiv büyüktür, kalıcıdır.
 - Heap nesnelerin yaşadığı alandır
 - Python’da değişkenler genelde **değer değil referans** taşır
 - Mutable ve immutable farkı heap davranışını etkiler
+
 
 
 
