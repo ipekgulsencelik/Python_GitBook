@@ -64,7 +64,7 @@ Aşağıdaki satıra bakalım:
 
 ```python
 x = 3
-```python
+```
 
 Bu satırın anlamı:
 
@@ -83,13 +83,14 @@ Bu satırın anlamı:
 
 ```python
 boxers = ["mike tyson", "muhammed ali"]
+```
 
 ## Basit Örnek
 
 ```python
 x = 3
 boxers = ["mike tyson", "muhammed ali"]
-
+```
 ### Bellek Açıklaması
 
 - `x` → Stack’te tutulur  
@@ -106,6 +107,7 @@ def greeting(name):
     print(f"{name} hello")
 
 greeting("ipek")
+```
 
 ### Ne Olur?
 
@@ -132,6 +134,7 @@ greeting("ipek")
 ```python
 a = "hi"
 a = a + "!"
+```
 
 Yeni bir string Heap’te oluşturulur.
 
@@ -146,6 +149,7 @@ Yeni bir string Heap’te oluşturulur.
 ```python
 numbers = [1, 2]
 numbers.append(3)
+```
 
 Aynı liste Heap’te değiştirilir.
 
@@ -186,5 +190,3 @@ Arşiv büyüktür, kalıcıdır.
 1. `a = [1, 2]; b = a; b.append(3)` → `a` ne olur?
 2. `s = "hi"; t = s; s += "!"` → `t` ne olur?
 3. List neden heap’te tutulur?
-
-
