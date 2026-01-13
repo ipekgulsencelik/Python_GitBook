@@ -129,7 +129,8 @@ greeting("ipek")
 ### Fonksiyon bitince
 - `first_name` stack’ten silinir
 - `"ipek"` nesnesine başka referans yoksa GC daha sonra temizleyebilir
-  
+
+### Özet
 - Fonksiyon biter → Stack otomatik temizlenir
 - Heap’teki veri:
   - Başka referans yoksa
@@ -137,9 +138,9 @@ greeting("ipek")
 
 ---
 
-## Mutable vs Immutable
+### Mutable vs Immutable
 
-### Immutable (Değiştirilemez)
+## Immutable (Değiştirilemez)
 
 - `int`
 - `float`
@@ -162,7 +163,7 @@ Bu “değiştirme” gibi görünür ama aslında:
 
 ---
 
-### Mutable (Değiştirilebilir)
+## Mutable (Değiştirilebilir)
 
 - `list`
 - `dict`
@@ -201,7 +202,7 @@ print(a)
 Neden?
 - `a` ve `b` aynı heap listesine işaret ediyor
 - `b.append(3)` aynı nesneyi değiştirdiği için `a` da değişmiş gibi görünür
-- 
+ 
 > Bu, Python’da en sık bug üreten konulardan biridir.
 
 ---
@@ -220,7 +221,7 @@ b[0].append(99)
 print(a)
 ```
 
-'a' da değişebilir çünkü iç listeler hâlâ ortak.
+`a` da değişebilir çünkü iç listeler hâlâ ortak.
 
 ## Deep Copy (Derin)
 
@@ -278,3 +279,4 @@ Arşiv büyüktür, kalıcıdır.
 - Heap nesnelerin yaşadığı alandır
 - Python’da değişkenler genelde **değer değil referans** taşır
 - Mutable ve immutable farkı heap davranışını etkiler
+
