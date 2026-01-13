@@ -1,7 +1,5 @@
 # Heap & Stack
 
-# Heap & Stack (Python)
-
 Bu bölümde Python’da belleğin nasıl çalıştığını,
 **Stack (Yığın)** ve **Heap (Öbek)** kavramlarını
 örneklerle ve sade bir dille öğreneceğiz.
@@ -150,3 +148,4 @@ Arşiv büyüktür, kalıcıdır.
 1. `a = [1, 2]; b = a; b.append(3)` → `a` ne olur?
 2. `s = "hi"; t = s; s += "!"` → `t` ne olur?
 3. List neden heap’te tutulur?
+
