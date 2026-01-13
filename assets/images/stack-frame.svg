@@ -1,0 +1,43 @@
+<svg width="900" height="420" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <rect width="900" height="420" fill="#ffffff"></rect>
+
+  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">
+    Function Call → Stack Frame
+  </text>
+
+  <!-- Stack area -->
+  <rect x="60" y="70" width="360" height="300" rx="12" fill="#f1f5f9" stroke="#334155" stroke-width="2"></rect>
+  <text x="240" y="95" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">STACK</text>
+
+  <!-- Frames -->
+  <rect x="95" y="120" width="290" height="70" rx="10" fill="#e0e7ff" stroke="#334155"></rect>
+  <text x="115" y="145" font-size="14" font-weight="bold" fill="#0f172a">Frame: main</text>
+  <text x="115" y="170" font-size="14" fill="#0f172a">greeting → function ref</text>
+
+  <rect x="95" y="210" width="290" height="120" rx="10" fill="#dbeafe" stroke="#334155"></rect>
+  <text x="115" y="235" font-size="14" font-weight="bold" fill="#0f172a">Frame: greeting()</text>
+  <text x="115" y="262" font-size="14" fill="#0f172a">first_name → (ref)</text>
+  <text x="115" y="288" font-size="14" fill="#0f172a">return address</text>
+  <text x="115" y="314" font-size="14" fill="#0f172a">locals, temporaries</text>
+
+  <!-- Heap area -->
+  <rect x="500" y="70" width="340" height="300" rx="12" fill="#ecfeff" stroke="#155e75" stroke-width="2"></rect>
+  <text x="670" y="95" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">HEAP</text>
+
+  <rect x="535" y="140" width="270" height="50" rx="10" fill="#cffafe" stroke="#155e75"></rect>
+  <text x="555" y="170" font-size="14" fill="#0f172a">str object: "ipek"</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"></path>
+    </marker>
+  </defs>
+
+  <!-- Arrow: first_name ref -->
+  <line x1="385" y1="260" x2="535" y2="165" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"></line>
+
+  <text x="450" y="395" text-anchor="middle" font-size="13" fill="#475569">
+    greeting("ipek") çağrıldığında stack’e yeni frame eklenir; parametre heap’teki string’i işaret eder.
+  </text>
+</svg>

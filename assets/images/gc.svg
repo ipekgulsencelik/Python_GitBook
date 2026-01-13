@@ -1,0 +1,36 @@
+<svg width="900" height="420" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <rect width="900" height="420" fill="#ffffff"></rect>
+  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">
+    Garbage Collection (Refcount + Cycle Collector)
+  </text>
+
+  <!-- Left: Refcount -->
+  <rect x="70" y="80" width="360" height="280" rx="12" fill="#f1f5f9" stroke="#334155" stroke-width="2"></rect>
+  <text x="250" y="110" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">Reference Counting</text>
+
+  <rect x="110" y="145" width="280" height="70" rx="12" fill="#e0e7ff" stroke="#334155"></rect>
+  <text x="130" y="175" font-size="14" fill="#0f172a">obj: "hello"</text>
+  <text x="130" y="198" font-size="14" fill="#0f172a">refcount = 2 → 1 → 0</text>
+
+  <rect x="110" y="235" width="280" height="85" rx="12" fill="#dcfce7" stroke="#166534"></rect>
+  <text x="130" y="265" font-size="14" font-weight="bold" fill="#166534">refcount = 0</text>
+  <text x="130" y="290" font-size="14" fill="#166534">nesne serbest bırakılır</text>
+
+  <!-- Right: Cycles -->
+  <rect x="470" y="80" width="360" height="280" rx="12" fill="#ecfeff" stroke="#155e75" stroke-width="2"></rect>
+  <text x="650" y="110" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">Cycle Collector</text>
+
+  <circle cx="570" cy="210" r="42" fill="#cffafe" stroke="#155e75" stroke-width="2"></circle>
+  <text x="570" y="215" text-anchor="middle" font-size="14" fill="#0f172a">A</text>
+
+  <circle cx="730" cy="210" r="42" fill="#cffafe" stroke="#155e75" stroke-width="2"></circle>
+  <text x="730" y="215" text-anchor="middle" font-size="14" fill="#0f172a">B</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#155e75"></path>
+    </marker>
+  </defs>
+
+  <line x1="612" y1="210" x2="688" y2="210" stroke="#155e75" stroke-width="2" marker-end="url(#arrow)"></line>
+  </svg>

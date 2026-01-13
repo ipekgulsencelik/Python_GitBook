@@ -1,0 +1,46 @@
+<svg width="900" height="420" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <rect width="900" height="420" fill="#ffffff"></rect>
+  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">
+    List Object Lives on Heap
+  </text>
+
+  <!-- Stack -->
+  <rect x="70" y="80" width="320" height="280" rx="12" fill="#f1f5f9" stroke="#334155" stroke-width="2"></rect>
+  <text x="230" y="105" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">STACK</text>
+
+  <rect x="105" y="140" width="250" height="70" rx="10" fill="#e0e7ff" stroke="#334155"></rect>
+  <text x="125" y="170" font-size="14" font-weight="bold" fill="#0f172a">boxers</text>
+  <text x="125" y="194" font-size="14" fill="#0f172a">→ reference</text>
+
+  <!-- Heap -->
+  <rect x="470" y="80" width="360" height="280" rx="12" fill="#ecfeff" stroke="#155e75" stroke-width="2"></rect>
+  <text x="650" y="105" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">HEAP</text>
+
+  <!-- List object -->
+  <rect x="510" y="140" width="300" height="90" rx="12" fill="#cffafe" stroke="#155e75"></rect>
+  <text x="530" y="170" font-size="14" font-weight="bold" fill="#0f172a">list object</text>
+  <text x="530" y="194" font-size="14" fill="#0f172a">["mike tyson", "muhammed ali"]</text>
+
+  <!-- String objects -->
+  <rect x="510" y="255" width="140" height="45" rx="10" fill="#cffafe" stroke="#155e75"></rect>
+  <text x="525" y="283" font-size="13" fill="#0f172a">str "mike tyson"</text>
+
+  <rect x="670" y="255" width="140" height="45" rx="10" fill="#cffafe" stroke="#155e75"></rect>
+  <text x="685" y="283" font-size="13" fill="#0f172a">str "muhammed ali"</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"></path>
+    </marker>
+  </defs>
+
+  <!-- Arrows -->
+  <line x1="355" y1="175" x2="510" y2="175" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"></line>
+  <line x1="610" y1="230" x2="580" y2="255" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"></line>
+  <line x1="710" y1="230" x2="740" y2="255" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"></line>
+
+  <text x="450" y="395" text-anchor="middle" font-size="13" fill="#475569">
+    boxers stack’te bir isimdir; liste ve elemanları heap’te nesne olarak yaşar.
+  </text>
+</svg>

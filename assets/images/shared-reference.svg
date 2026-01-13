@@ -1,0 +1,46 @@
+<svg width="900" height="420" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <rect width="900" height="420" fill="#ffffff"></rect>
+  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">
+    Shared Reference (Aliasing) Bug
+  </text>
+
+  <!-- Stack -->
+  <rect x="70" y="80" width="320" height="280" rx="12" fill="#f1f5f9" stroke="#334155" stroke-width="2"></rect>
+  <text x="230" y="105" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">STACK</text>
+
+  <rect x="105" y="140" width="250" height="65" rx="10" fill="#e0e7ff" stroke="#334155"></rect>
+  <text x="125" y="170" font-size="14" font-weight="bold" fill="#0f172a">a</text>
+  <text x="165" y="170" font-size="14" fill="#0f172a">→ same list</text>
+
+  <rect x="105" y="225" width="250" height="65" rx="10" fill="#e0e7ff" stroke="#334155"></rect>
+  <text x="125" y="255" font-size="14" font-weight="bold" fill="#0f172a">b</text>
+  <text x="165" y="255" font-size="14" fill="#0f172a">→ same list</text>
+
+  <!-- Heap -->
+  <rect x="470" y="80" width="360" height="280" rx="12" fill="#ecfeff" stroke="#155e75" stroke-width="2"></rect>
+  <text x="650" y="105" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">HEAP</text>
+
+  <rect x="510" y="155" width="300" height="90" rx="12" fill="#cffafe" stroke="#155e75"></rect>
+  <text x="530" y="185" font-size="14" font-weight="bold" fill="#0f172a">list object</text>
+  <text x="530" y="210" font-size="14" fill="#0f172a">[1, 2]  → append(3) → [1, 2, 3]</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"></path>
+    </marker>
+  </defs>
+
+  <line x1="355" y1="172" x2="510" y2="190" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"></line>
+  <line x1="355" y1="257" x2="510" y2="210" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"></line>
+
+  <!-- Warning badge -->
+  <rect x="510" y="265" width="300" height="40" rx="10" fill="#fee2e2" stroke="#991b1b"></rect>
+  <text x="660" y="291" text-anchor="middle" font-size="14" font-weight="bold" fill="#991b1b">
+    a ve b aynı nesneyi paylaşır
+  </text>
+
+  <text x="450" y="395" text-anchor="middle" font-size="13" fill="#475569">
+    b.append(3) aynı heap listesini değiştirir; a da değişmiş görünür.
+  </text>
+</svg>
