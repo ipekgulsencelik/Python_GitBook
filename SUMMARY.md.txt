@@ -1,4 +1,0 @@
-# Summary
-
-* [Giriş](README.md)
-* [Heap & Stack](heap-stack.md)
