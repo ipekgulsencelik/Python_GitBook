@@ -1,0 +1,7 @@
+# Heap & Stack
+
+## Stack
+Stack geçici bellektir.
+
+## Heap
+Heap dinamik bellektir.
