@@ -14,6 +14,8 @@ Bu bölümde Python’da bellek yönetimini iki ana kavram üzerinden öğrenece
 
 ## Stack Nedir?
 
+![Stack çalışma mantığı](assets/images/stack-frame.png)
+
 **Stack (Yığın)**, fonksiyon çalışırken kullanılan, **geçici, düzenli ve hızlı** bir bellek alanıdır.
 
 ### Stack’in Özellikleri
@@ -39,6 +41,8 @@ Bellek yönetimi çok hızlıdır
 ---
 
 ## Heap Nedir?
+
+![Heap bellek yapısı](assets/images/heap-objects.png)
 
 **Heap (Öbek)**, program çalışırken oluşturulan **dinamik ve büyük nesnelerin** tutulduğu bellek alanıdır.
 
@@ -213,6 +217,8 @@ Yani:
 
 ## “Aynı Nesneyi Paylaşma” Problemi (Çok önemli)
 
+![Shared reference bug](assets/images/shared-reference.svg)
+
 ```python
 a = [1, 2]
 b = a
@@ -235,6 +241,8 @@ Sebep:
 ---
 
 ## Shallow Copy vs Deep Copy (Heap kopyalama)
+
+![Shallow vs Deep Copy](assets/images/shallow-deep-copy.svg)
 
 ### Shallow Copy (Yüzeysel)
 
@@ -273,6 +281,8 @@ print(a)
 ---
 
 ## Garbage Collector (GC) Kısaca
+
+![Garbage Collector](assets/images/gc.svg)
 
 Python’da bellek temizliği iki mekanizma ile olur:
 - **Reference Counting:** Bir nesneyi işaret eden referans sayısı 0 olursa serbest kalır ve nesne silinir
@@ -316,6 +326,7 @@ Arşiv büyüktür, kalıcıdır.
 - Heap nesnelerin yaşadığı alandır
 - Python’da değişkenler genelde **değer değil referans** taşır
 - Mutable ve immutable farkı heap davranışını etkiler
+
 
 
 
