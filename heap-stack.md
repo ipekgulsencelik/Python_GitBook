@@ -87,9 +87,9 @@ boxers = ["mike tyson", "muhammed ali"]
 
 Burada olan şey:
 
-- 'boxers' → stack’te duran bir **referans**
-- '["mike tyson", "muhammed ali"]' → heap’te duran **list nesnesi**
-- '"mike tyson"' ve '"muhammed ali'" → heap’te duran **string nesneleri**
+- `boxers` → stack’te duran bir **referans**
+- `["mike tyson", "muhammed ali"]` → heap’te duran **list nesnesi**
+- `"mike tyson"` ve `"muhammed ali"` → heap’te duran **string nesneleri**
 
 List büyük ve dinamik olduğu için heap’te yaşar.
 
@@ -198,4 +198,5 @@ Arşiv büyüktür, kalıcıdır.
 1. `a = [1, 2]; b = a; b.append(3)` → `a` ne olur?
 2. `s = "hi"; t = s; s += "!"` → `t` ne olur?
 3. List neden heap’te tutulur?
+
 
