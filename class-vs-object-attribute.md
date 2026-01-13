@@ -177,9 +177,9 @@ class User:
 
 Python bir attribute ararken şu sırayı izler:
 
-1️⃣ **Object(instance) attribute**
-2️⃣ **Class attribute**
-3️⃣ **Parent class attribute**
+- **Object(instance) attribute**
+- **Class attribute**
+- **Parent class attribute**
 
 #### 🔍 Örnek
 
@@ -194,8 +194,8 @@ a.x = 99
 print(a.x)  # 99 (object attribute oluştu!)
 ```
 
-🧠 `a.x = 99` ifadesi class attribute’u değiştirmez → class attribute’ü **ezmez**,
-sadece **nesneye özel yeni bir attribute** yaratır.
+- `a.x = 99` ifadesi class attribute’u değiştirmez → class attribute’ü **ezmez**,
+- sadece **nesneye özel yeni bir attribute** yaratır.
 
 ---
 
