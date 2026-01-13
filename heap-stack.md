@@ -1,50 +1,88 @@
 # Heap & Stack
 
-Bu bölümde Python’da belleğin nasıl çalıştığını,
-**Stack (Yığın)** ve **Heap (Öbek)** kavramlarını
-örneklerle ve sade bir dille öğreneceğiz.
+Bu bölümde Python’da bellek yönetimini iki ana kavram üzerinden öğreneceğiz:
+
+- **Stack (Yığın):** Fonksiyon çağrıları ve geçici/yerel bilgiler
+- **Heap (Öbek):** Program çalışırken oluşan nesneler (list, dict, str, class vb.)
+
+> 📌 Önemli fikir:  
+> Python’da çoğu zaman değişkenler “değeri” değil, **bir nesneye işaret eden referansı** taşır.
 
 ---
 
 ## Stack Nedir?
 
-**Stack (Yığın)**, fonksiyon çağrıları sırasında kullanılan,
-**geçici ve hızlı** bir bellek alanıdır.
+**Stack (Yığın)**, fonksiyon çalışırken kullanılan, **geçici, düzenli ve hızlı** bir bellek alanıdır.
 
 ### Stack’in Özellikleri
-- LIFO mantığıyla çalışır (Last In – First Out)
-- Fonksiyonlar çalışırken oluşur
-- Fonksiyon bitince otomatik temizlenir
-- Çok hızlıdır
+Stack, **LIFO** mantığıyla çalışır:
+
+- **Last In** (son giren)
+- **First Out** (ilk çıkar)
+  
+Fonksiyonlar çalışırken oluşur
+Fonksiyon çağrısı olduğunda stack’e bir “çerçeve” (**stack frame**) eklenir.  
+Fonksiyon bittiğinde o frame **otomatik kaldırılır**
+Çok hızlıdır
 
 ### Stack’te Tutulanlar
-- Fonksiyon çağrıları
+- Fonksiyon çağrıları (call frames)
 - Parametreler
-- Yerel değişkenler
-- Referanslar (adresler)
+- Yerel değişkenler (local variables)
+- Çoğunlukla **referanslar/adresler** (nesnenin kendisi değil)
+
+> Stack’in en güçlü yanı:  
+> **Hızlıdır** ve **kendiliğinden temizlenir**.
 
 ---
 
 ## Heap Nedir?
 
-**Heap (Öbek)**, program çalışırken oluşturulan
-**dinamik ve büyük nesnelerin** tutulduğu bellek alanıdır.
+**Heap (Öbek)**, program çalışırken oluşturulan **dinamik ve büyük nesnelerin** tutulduğu bellek alanıdır.
 
 ### Heap’in Özellikleri
-- Dinamiktir
+- Boyut dinamik olabilir (liste büyür-küçülür)
 - Daha yavaştır
-- Garbage Collector tarafından temizlenir
-- Nesneler burada yaşar
+- Temizliği “otomatik” ama stack gibi anında değil:
+  - **Garbage Collector** (GC) ile yapılır
+- Nesneler burada yaşar (list/dict/str/class)r
 
 ### Heap’te Tutulanlar
 - list
 - dict
 - set
 - tuple
-- string
-- class nesneleri
+- `str`
+- class instance’ları (nesneler)
+- çoğu “Python object”
 
 ---
+
+## Python’da “Değişken = Referans” Mantığı
+
+Aşağıdaki satıra bakalım:
+
+```python
+x = 3
+```python
+
+Bu satırın anlamı:
+
+- Heap’te bir **`3` nesnesi** vardır  
+  (Python’da `int` dahil her şey bir nesnedir)
+
+- `x` ise bu nesneye işaret eden bir **isim / referanstır**
+
+> **Pratik kural:**  
+> `x` bir kutu değildir.  
+> `x`, Heap’teki bir nesneyi işaret eden **etiket** gibidir.
+
+---
+
+## Örnek: List Neden Heap’te Tutulur?
+
+```python
+boxers = ["mike tyson", "muhammed ali"]
 
 ## Basit Örnek
 
@@ -148,4 +186,5 @@ Arşiv büyüktür, kalıcıdır.
 1. `a = [1, 2]; b = a; b.append(3)` → `a` ne olur?
 2. `s = "hi"; t = s; s += "!"` → `t` ne olur?
 3. List neden heap’te tutulur?
+
 
