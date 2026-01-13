@@ -133,14 +133,13 @@ greeting("ipek")
 ### Özet
 - Fonksiyon biter → Stack otomatik temizlenir
 - Heap’teki veri:
-  - Başka referans yoksa
-  - Garbage Collector (GC) tarafından silinir
+  - Başka referans yoksa Garbage Collector (GC) tarafından silinir
 
 ---
 
-### Mutable vs Immutable
+## Mutable vs Immutable
 
-## Immutable (Değiştirilemez)
+### Immutable (Değiştirilemez)
 
 - `int`
 - `float`
@@ -163,7 +162,7 @@ Bu “değiştirme” gibi görünür ama aslında:
 
 ---
 
-## Mutable (Değiştirilebilir)
+### Mutable (Değiştirilebilir)
 
 - `list`
 - `dict`
@@ -207,8 +206,8 @@ Neden?
 
 ---
 
-### Shallow Copy vs Deep Copy (Heap kopyalama)
-## Shallow Copy (Yüzeysel)
+## Shallow Copy vs Deep Copy (Heap kopyalama)
+### Shallow Copy (Yüzeysel)
 
 Sadece üst kabı kopyalar, içerideki nesneler paylaşılabilir:
 
@@ -223,7 +222,7 @@ print(a)
 
 `a` da değişebilir çünkü iç listeler hâlâ ortak.
 
-## Deep Copy (Derin)
+### Deep Copy (Derin)
 
 İç içe nesneleri de kopyalar:
 
@@ -240,7 +239,7 @@ print(a)
 
 ---
 
-### Garbage Collector (GC) Kısaca
+## Garbage Collector (GC) Kısaca
 
 Python’da bellek temizliği iki mekanizma ile olur:
 - **Reference Counting:** Bir nesneyi işaret eden referans sayısı 0 olursa serbest kalır
@@ -279,4 +278,5 @@ Arşiv büyüktür, kalıcıdır.
 - Heap nesnelerin yaşadığı alandır
 - Python’da değişkenler genelde **değer değil referans** taşır
 - Mutable ve immutable farkı heap davranışını etkiler
+
 
