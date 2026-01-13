@@ -14,7 +14,7 @@ Bu bölümde Python’da bellek yönetimini iki ana kavram üzerinden öğrenece
 
 ## Stack Nedir?
 
-![Stack çalışma mantığı](assets/images/stack-frame.png)
+![Stack çalışma mantığı](assets/images/stack-frame.svg)
 
 **Stack (Yığın)**, fonksiyon çalışırken kullanılan, **geçici, düzenli ve hızlı** bir bellek alanıdır.
 
@@ -42,7 +42,7 @@ Bellek yönetimi çok hızlıdır
 
 ## Heap Nedir?
 
-![Heap bellek yapısı](assets/images/heap-objects.png)
+![Heap objects](assets/images/heap-objects.svg)
 
 **Heap (Öbek)**, program çalışırken oluşturulan **dinamik ve büyük nesnelerin** tutulduğu bellek alanıdır.
 
@@ -126,6 +126,8 @@ boxers = ["mike tyson", "muhammed ali"]
 ---
 
 ## Fonksiyon Çağrısı ve Bellek
+
+![Function stack heap](assets/images/function-stack-heap.svg)
 
 ```python
 def greeting(first_name: str):
@@ -297,7 +299,7 @@ Python’da bellek temizliği iki mekanizma ile olur:
 
 ## Stack vs Heap Karşılaştırma
 
-![Stack vs Heap](assets/images/stack-heap.svg)
+![Stack vs Heap](assets/images/stack-vs-heap.svg)
 
 Stack geçici bellektir, Heap nesnelerin yaşadığı alandır.
 
@@ -327,6 +329,7 @@ Arşiv büyüktür, kalıcıdır.
 - Heap nesnelerin yaşadığı alandır
 - Python’da değişkenler genelde **değer değil referans** taşır
 - Mutable ve immutable farkı heap davranışını etkiler
+
 
 
 
