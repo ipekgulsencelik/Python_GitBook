@@ -1,4 +1,4 @@
-# Python: Class Attribute vs Object (Instance) Attribute
+# Class Attribute vs Object (Instance) Attribute
 
 Bu dokümanda Python’da **class attribute** ve **object (instance) attribute** kavramlarının
 mantığı, farkları ve en sık yapılan hatalar örneklerle açıklanmaktadır.
@@ -133,8 +133,8 @@ print(d1.languages)  # ['Python']
 print(d2.languages)  # []
 ```
 
-✔️ Her nesnenin **kendi listesi** var
-✔️ Yan etki yok
+- Her nesnenin **kendi listesi** var
+- Yan etki yok
 
 **Özet**
 - **Mutable veri + class attribute = HATA**
