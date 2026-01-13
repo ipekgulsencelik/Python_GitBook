@@ -1,0 +1,44 @@
+<svg width="900" height="420" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <rect width="900" height="420" fill="#ffffff"></rect>
+
+  <text x="450" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">
+    Function Call: Stack Frame + Heap Object
+  </text>
+
+  <!-- Stack -->
+  <rect x="70" y="70" width="360" height="300" rx="14" fill="#f1f5f9" stroke="#334155" stroke-width="2"></rect>
+  <text x="250" y="100" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">STACK</text>
+
+  <!-- main frame -->
+  <rect x="105" y="130" width="290" height="70" rx="12" fill="#e0e7ff" stroke="#334155"></rect>
+  <text x="125" y="158" font-size="14" font-weight="bold" fill="#0f172a">Frame: main</text>
+  <text x="125" y="182" font-size="14" fill="#0f172a">greeting → function ref</text>
+
+  <!-- greeting frame -->
+  <rect x="105" y="220" width="290" height="120" rx="12" fill="#dbeafe" stroke="#334155"></rect>
+  <text x="125" y="248" font-size="14" font-weight="bold" fill="#0f172a">Frame: greeting()</text>
+  <text x="125" y="275" font-size="14" fill="#0f172a">first_name → ref</text>
+  <text x="125" y="302" font-size="14" fill="#0f172a">locals / temporaries</text>
+  <text x="125" y="329" font-size="14" fill="#0f172a">return address</text>
+
+  <!-- Heap -->
+  <rect x="500" y="70" width="330" height="300" rx="14" fill="#ecfeff" stroke="#155e75" stroke-width="2"></rect>
+  <text x="665" y="100" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">HEAP</text>
+
+  <rect x="545" y="160" width="240" height="60" rx="12" fill="#cffafe" stroke="#155e75"></rect>
+  <text x="565" y="188" font-size="14" font-weight="bold" fill="#0f172a">str object</text>
+  <text x="565" y="210" font-size="14" fill="#0f172a">"ipek"</text>
+
+  <!-- arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"></path>
+    </marker>
+  </defs>
+
+  <line x1="395" y1="270" x2="545" y2="190" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"></line>
+
+  <text x="450" y="405" text-anchor="middle" font-size="13" fill="#475569">
+    Parametre (first_name) stack’te referanstır; "ipek" heap’te nesnedir.
+  </text>
+</svg>

@@ -1,0 +1,33 @@
+<svg width="900" height="420" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <rect width="900" height="420" fill="#ffffff"></rect>
+
+  <text x="450" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">
+    Stack vs Heap (Quick Comparison)
+  </text>
+
+  <!-- Stack card -->
+  <rect x="80" y="70" width="350" height="290" rx="16" fill="#f1f5f9" stroke="#334155" stroke-width="2"></rect>
+  <text x="255" y="105" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">STACK</text>
+
+  <text x="120" y="145" font-size="14" fill="#0f172a">• Çok hızlı</text>
+  <text x="120" y="175" font-size="14" fill="#0f172a">• LIFO (call stack)</text>
+  <text x="120" y="205" font-size="14" fill="#0f172a">• Stack frame’ler</text>
+  <text x="120" y="235" font-size="14" fill="#0f172a">• Parametre + local ref</text>
+  <text x="120" y="265" font-size="14" fill="#0f172a">• Fonksiyon bitince silinir</text>
+
+  <!-- Heap card -->
+  <rect x="470" y="70" width="350" height="290" rx="16" fill="#ecfeff" stroke="#155e75" stroke-width="2"></rect>
+  <text x="645" y="105" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">HEAP</text>
+
+  <text x="510" y="145" font-size="14" fill="#0f172a">• Daha yavaş (dinamik)</text>
+  <text x="510" y="175" font-size="14" fill="#0f172a">• Nesneler burada yaşar</text>
+  <text x="510" y="205" font-size="14" fill="#0f172a">• list / dict / str / class</text>
+  <text x="510" y="235" font-size="14" fill="#0f172a">• Boyut büyür / küçülür</text>
+  <text x="510" y="265" font-size="14" fill="#0f172a">• GC/refcount ile temizlenir</text>
+
+  <!-- center note -->
+  <rect x="310" y="320" width="280" height="55" rx="12" fill="#fff7ed" stroke="#9a3412"></rect>
+  <text x="450" y="352" text-anchor="middle" font-size="13" font-weight="bold" fill="#9a3412">
+    Stack: isim/referans  →  Heap: nesne
+  </text>
+</svg>
