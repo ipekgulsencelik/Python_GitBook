@@ -58,7 +58,14 @@ Fonksiyon bittiğinde o frame **otomatik kaldırılır**
 
 ---
 
-## Python’da “Değişken = Referans” Mantığı
+## “Değişken = Referans” Mantığı
+
+Bu bölümde Python’da değişkenlerin değer değil, nesnelere **referans** tuttuğunu göreceğiz.
+
+<p align="center">
+  <img src="assets/images/stack-heap.svg" alt="Stack vs Heap (Python)" width="520">
+</p>
+<p align="center"><em>Şekil: Python’da Stack–Heap referans modeli</em></p>
 
 Aşağıdaki satıra bakalım:
 
@@ -252,6 +259,10 @@ Python’da bellek temizliği iki mekanizma ile olur:
 
 ## Stack vs Heap Karşılaştırma
 
+![Stack vs Heap](assets/images/stack-heap.svg)
+
+Stack geçici bellektir, Heap nesnelerin yaşadığı alandır.
+
 | Özellik | Stack | Heap |
 |---|---|---|
 | Hız | Çok hızlı | Daha yavaş |
@@ -278,5 +289,6 @@ Arşiv büyüktür, kalıcıdır.
 - Heap nesnelerin yaşadığı alandır
 - Python’da değişkenler genelde **değer değil referans** taşır
 - Mutable ve immutable farkı heap davranışını etkiler
+
 
 
