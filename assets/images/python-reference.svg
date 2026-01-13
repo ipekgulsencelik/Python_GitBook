@@ -1,0 +1,44 @@
+<svg width="700" height="320" viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+
+  <rect width="700" height="320" fill="#ffffff"></rect>
+
+  <text x="350" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">
+    Python Variable = Reference
+  </text>
+
+  <!-- Stack -->
+  <rect x="60" y="60" width="220" height="200" rx="12" fill="#f1f5f9" stroke="#334155" stroke-width="2"></rect>
+  <text x="170" y="85" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">
+    STACK
+  </text>
+
+  <rect x="100" y="130" width="140" height="50" rx="8" fill="#e0e7ff" stroke="#334155"></rect>
+  <text x="170" y="162" text-anchor="middle" font-size="15" fill="#0f172a">
+    x
+  </text>
+
+  <!-- Heap -->
+  <rect x="420" y="60" width="220" height="200" rx="12" fill="#ecfeff" stroke="#155e75" stroke-width="2"></rect>
+  <text x="530" y="85" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">
+    HEAP
+  </text>
+
+  <rect x="470" y="135" width="120" height="50" rx="8" fill="#cffafe" stroke="#155e75"></rect>
+  <text x="530" y="167" text-anchor="middle" font-size="15" fill="#0f172a">
+    int: 3
+  </text>
+
+  <!-- Arrow -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"></path>
+    </marker>
+  </defs>
+
+  <line x1="240" y1="155" x2="470" y2="160" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"></line>
+
+  <text x="350" y="295" text-anchor="middle" font-size="13" fill="#475569">
+    Değişkenler nesneyi değil, heap’teki nesneye olan referansı tutar
+  </text>
+
+</svg>
