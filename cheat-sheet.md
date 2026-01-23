@@ -257,7 +257,7 @@ file.write("Hello, World!")
 ```python
 file.close()
 ```
-> ✅ Best Practice:
+> ✅ **Best Practice:**
 ```python
 with open("example.txt", "r") as file:
     content = file.read()
@@ -297,30 +297,6 @@ except ZeroDivisionError:
     print("Error!")
 finally:
     print("This runs always")
-```
-
----
-
-## 9. Working with Libraries
-
-### Importing a Library
-```python
-import math
-```
-
-### Using a Library Function
-```python
-math.sqrt(16)
-```
-
-### Install a Library (pip)
-```python
-pip install pandas
-```
-
-### Import Specific Function
-```python
-from math import sqrt
 ```
 
 ---
