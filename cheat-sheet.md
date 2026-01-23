@@ -185,3 +185,47 @@ add = lambda a, b: a + b
 ```
 
 ---
+
+## 5. String Manipulation
+
+### Concatenate Strings
+```python
+full_name = "John" + " " + "Doe"
+```
+
+### String Length
+```python
+len("Hello")
+```
+
+### Convert to Upper Case
+```python
+"hello".upper()
+```
+
+### Convert to Lower Case
+```python
+"HELLO".lower()
+```
+
+### Substring
+```python
+"Hello, World!"[7:12]
+```
+
+### Find Substring
+```python
+"Hello, World!".find("World")
+```
+
+### Replace Substring
+```python
+"Hello, World!".replace("World", "Python")
+```
+
+### Split Substring
+```python
+"Hello, World!".split(", ")
+```
+
+---
