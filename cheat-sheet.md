@@ -104,3 +104,57 @@ my_dict["key3"] = "value3"
 ```
 
 ---
+
+## 3. Control Flow
+
+### If Statement
+```python
+if x > 10:
+    print("x is greater than 10")
+```
+
+### If-Else Statement
+```python
+if x > 10:
+    print("x is greater than 10")
+else:
+    print("x is less than or equal to 10")
+```
+
+### Elif Statement
+```python
+if x > 10:
+    print("x is greater")
+elif x == 10:
+    print("x is 10")
+else:
+    print("x is smaller")
+```
+
+### For Loop
+```python
+for i in range(5):
+    print(i)
+```
+
+### While Loop
+```python
+while x < 10:
+    x += 1
+```
+
+### Break
+```python
+for i in range(5):
+    if i == 3:
+        break
+```
+
+### Continue
+```python
+for i in range(5):
+    if i == 3:
+        continue
+```
+
+---
