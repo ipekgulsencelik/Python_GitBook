@@ -264,3 +264,182 @@ with open("example.txt", "r") as file:
 ```
 
 ---
+
+## 7. List Comprehension
+
+### Basic List Comprehension
+```python
+[x**2 for x in range(5)]
+```
+
+### With Condition
+```python
+[x for x in range(10) if x % 2 == 0]
+```
+
+---
+
+## 8. Error Handling
+
+### Try-Except
+```python
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+```
+
+### Try-Except-Finally
+```python
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Error!")
+finally:
+    print("This runs always")
+```
+
+---
+
+## 9. Working with Libraries
+
+### Importing a Library
+```python
+import math
+```
+
+### Using a Library Function
+```python
+math.sqrt(16)
+```
+
+### Install a Library (pip)
+```python
+pip install pandas
+```
+
+### Import Specific Function
+```python
+from math import sqrt
+```
+
+---
+
+## 9. Working with Libraries
+
+### Importing a Library
+```python
+import math
+```
+
+### Using a Library Function
+```python
+math.sqrt(16)
+```
+
+### Install a Library (pip)
+```python
+pip install pandas
+```
+
+### Import Specific Function
+```python
+from math import sqrt
+```
+
+---
+
+## 10. NumPy for Numerical Operations
+
+### Import NumPy
+```python
+import numpy as np
+```
+
+### Create NumPy Array
+```python
+arr = np.array([1, 2, 3, 4, 5])
+```
+
+### Array Reshaping
+```python
+arr.reshape(5, 1)
+```
+
+### Array Operations
+```python
+arr + 10
+arr * 2
+```
+
+### Array Slicing
+```python
+arr[1:4]
+```
+
+### Array Operations
+```python
+np.mean(arr)
+np.median(arr)
+np.std(arr)
+```
+
+---
+
+## 11. Pandas for Data Handling
+
+### Import Pandas
+```python
+import pandas as pd
+```
+
+### Create DataFrame
+```python
+df = pd.DataFrame({
+    "Name": ["Alice", "Bob"],
+    "Age": [25, 30]
+})
+```
+
+### Read CSV File
+```python
+df = pd.read_csv("data.csv")
+```
+
+### View Data
+```python
+df.head()
+```
+
+---
+
+## 12. Matplotlib for Visualization
+
+### Import Matplotlib
+```python
+import matplotlib.pyplot as plt
+```
+
+### Simple Plot
+```python
+plt.plot([1, 2, 3], [4, 5, 6])
+plt.show()
+```
+
+### Bar Plot
+```python
+plt.bar([1, 2, 3], [4, 5, 6])
+plt.show()
+```
+
+### Histogram
+```python
+plt.hist([1, 2, 2, 3, 4, 5])
+plt.show()
+```
+
+### Scatter Plot
+```python
+plt.scatter([1, 2, 3], [4, 5, 6])
+plt.show()
+```
