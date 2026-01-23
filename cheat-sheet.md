@@ -229,3 +229,38 @@ len("Hello")
 ```
 
 ---
+
+## 6. File Handling
+
+### Open a File
+```python
+file = open("example.txt", "r")
+```
+
+### Read File
+```python
+content = file.read()
+```
+
+### Read Line by Line
+```python
+lines = file.readlines()
+```
+
+### Write to File
+```python
+file = open("example.txt", "w")
+file.write("Hello, World!")
+```
+
+### Close a File
+```python
+file.close()
+```
+> ✅ Best Practice:
+```python
+with open("example.txt", "r") as file:
+    content = file.read()
+```
+
+---
