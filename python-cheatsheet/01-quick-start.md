@@ -39,6 +39,8 @@ Yani yazdığın her satır, yukarıdan aşağıya doğru yürütülür.
 
 ## ▶️ İlk Python Kodumuz
 
+Herkesin ilk kodu 👇
+
 ```python
 print("Hello, World!")
 ```
@@ -58,13 +60,17 @@ Hello, World!
 
 ## 📦 Değişken (Variable) Nedir?
 
+Değişkenler, veri saklamak için kullanılır.
+
 ```python
 x = 10
 name = "İpek"
 ```
 
-Değişkenler, veri saklamak için kullanılır.
-Python’da değişken tipi belirtmek zorunda değilsin.
+- `x` → bir sayı tutar
+- `name` → bir metin tutar
+
+Python’da **tip belirtmek zorunda değilsin**. Python kendisi anlar.
 
 ---
 
@@ -73,6 +79,12 @@ Python’da değişken tipi belirtmek zorunda değilsin.
 ```python
 type(x)
 type(name)
+```
+
+Çıktı:
+```text
+<class 'int'>
+<class 'str'>
 ```
 
 ---
@@ -84,7 +96,11 @@ name = input("Adını gir: ")
 print(name)
 ```
 
-⚠️ `input()` her zaman string döndürür.
+Bu kod:
+1.   Kullanıcıdan veri ister
+2.  Girilen değeri ekrana yazdırır
+
+> ⚠️ `input()` her zaman string döndürür.
 
 ---
 
@@ -103,7 +119,8 @@ print(a / b)
 
 ## 🧠 Bilmen Gereken Küçük Notlar
 
-- Python **case-sensitive**’dir  
+- Python **case-sensitive**’dir
+  - `Name` ≠ `name` 
 - Girintiler (indentation) çok önemlidir  
 - Hata almak öğrenmenin parçasıdır  
 
