@@ -1,4 +1,4 @@
-# 🐍 Python Cheat Sheet
+# 🐍 Cheat Sheet
 _Commonly Used Code Snippets_
 
 Bu doküman, Python öğrenirken ve çalışırken en sık kullanılan yapıların **hızlı bir referans (cheat sheet)** halidir.
@@ -155,6 +155,33 @@ for i in range(5):
 for i in range(5):
     if i == 3:
         continue
+```
+
+---
+
+## 4. Functions
+
+### Define Function
+```python
+def my_function():
+    print("Hello from function!")
+```
+
+### Function with Parameters
+```python
+def greet(name):
+    print(f"Hello, {name}!")
+```
+
+### Return Value from Function
+```python
+def add(a, b):
+    return a + b
+```
+
+### Lambda Function
+```python
+add = lambda a, b: a + b
 ```
 
 ---
